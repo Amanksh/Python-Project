@@ -28,14 +28,18 @@ class Deck:
                 self.all_cards.append(created_card)
     def shuffle(self):
         random.shuffle(self.all_cards)
-
+    def deal_one(self):
+        return self.all_cards.pop()
 # two_spades =Card("spades" , "two")
 
 new_deck = Deck()
 new_deck.shuffle()
 
-for card in new_deck.all_cards:
-    print(card)
+# for card in new_deck.all_cards:
+#     print(card)
+
+my_card = new_deck.deal_one()
+print(my_card)
 
 
 
